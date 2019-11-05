@@ -14,10 +14,12 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.AppCompat.DayNight.NoActionBar">
+        <activity android:name=".LoginActivity"></activity>
+        <activity android:name=".AsistenciaActivity" />
         <activity
             android:name=".DetallePonente_Jairo"
             android:label="Jairo Vargas Bonilla"
-            android:theme="@style/Theme.AppCompat" />
+            android:theme="@style/Theme.AppCompat.DayNight" />
         <activity
             android:name=".DetallePonente_Jose"
             android:label="José Durán Talledo"
@@ -62,10 +64,10 @@
             android:name=".DetallePonente_Ruth"
             android:label="Ruth Manzanares Grados"
             android:theme="@style/Theme.AppCompat.DayNight" />
-
         <activity android:name=".DetalleAgenda" />
         <activity android:name=".ListaAgenda" />
-        <activity android:name=".Ponentes"
+        <activity
+            android:name=".Ponentes"
             android:label="Ponentes"
             android:theme="@style/Theme.AppCompat.DayNight" />
         <activity android:name=".MainActivity" />

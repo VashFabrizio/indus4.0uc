@@ -53,10 +53,10 @@
         app:layout_constraintTop_toBottomOf="@+id/img_portada" />
 
     <TextView
-        android:id="@+id/tvEventoj"
+        android:id="@+id/tvEventoJ"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="92dp"
+        android:layout_marginBottom="80dp"
         android:background="#24B2A6"
         android:padding="10dp"
         android:textColor="#ffffff"
@@ -68,7 +68,7 @@
         app:layout_constraintStart_toStartOf="parent" />
 
     <TextView
-        android:id="@+id/tvDiaEventoj"
+        android:id="@+id/tvDiaEventoJ"
         android:layout_width="150dp"
         android:layout_height="wrap_content"
         android:layout_marginBottom="56dp"
@@ -78,7 +78,7 @@
         app:layout_constraintStart_toStartOf="parent" />
 
     <TextView
-        android:id="@+id/tvHoraEventoH"
+        android:id="@+id/tvHoraEventoJ"
         android:layout_width="100dp"
         android:layout_height="wrap_content"
         android:layout_marginBottom="56dp"
@@ -126,12 +126,12 @@
         android:layout_height="wrap_content"
         android:layout_marginLeft="15dp"
         android:layout_marginRight="30dp"
-        android:layout_marginBottom="188dp"
+        android:layout_marginBottom="225dp"
         android:text="Eventos"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.072"
+        app:layout_constraintHorizontal_bias="0.015"
         app:layout_constraintStart_toStartOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
