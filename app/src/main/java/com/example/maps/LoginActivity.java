@@ -46,7 +46,7 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
         pasword = etContra.getText().toString();
 
         if(!usuario.isEmpty() && !pasword.isEmpty()){
-            validarUsuario("http://inversioneselscorpion.pe/fonts/PNG/Industria4punto0/servicios/user.php");
+            validarUsuario("http://ymarquez.webfactional.com/serviciosRest/controladores/user.php");
         }else{
             Toast.makeText(LoginActivity.this,"Rellene los campos",Toast.LENGTH_SHORT).show();
 
