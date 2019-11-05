@@ -11,14 +11,13 @@
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
-        android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/AppTheme">
+        android:theme="@style/Theme.AppCompat.DayNight.NoActionBar">
         <activity
             android:name=".DetallePonente_Jairo"
             android:label="Jairo Vargas Bonilla"
-            android:theme="@style/Theme.AppCompat.DayNight" />
+            android:theme="@style/Theme.AppCompat" />
         <activity
             android:name=".DetallePonente_Jose"
             android:label="José Durán Talledo"
@@ -66,7 +65,9 @@
 
         <activity android:name=".DetalleAgenda" />
         <activity android:name=".ListaAgenda" />
-        <activity android:name=".Ponentes" />
+        <activity android:name=".Ponentes"
+            android:label="Ponentes"
+            android:theme="@style/Theme.AppCompat.DayNight" />
         <activity android:name=".MainActivity" />
         <activity android:name=".ImagenCompleta" />
         <!--
