@@ -48,7 +48,7 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
         if(!usuario.isEmpty() && !pasword.isEmpty()){
             validarUsuario("http://inversioneselscorpion.pe/fonts/PNG/Industria4punto0/servicios/user.php");
         }else{
-            Toast.makeText(LoginActivity.this,"NO SE PERMITEN CAMPOS VACIOS",Toast.LENGTH_SHORT).show();
+            Toast.makeText(LoginActivity.this,"Rellene los campos",Toast.LENGTH_SHORT).show();
 
         }
 
@@ -63,7 +63,7 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
                     i.putExtra("correo_usr",etUsuario.getText().toString());
                     startActivity(i);
                 }else{
-                    Toast.makeText(LoginActivity.this,"CREDENCIALES INVALIDAS",Toast.LENGTH_SHORT).show();
+                    Toast.makeText(LoginActivity.this,"Usuario inválido",Toast.LENGTH_SHORT).show();
                 }
             }
         }, new Response.ErrorListener() {

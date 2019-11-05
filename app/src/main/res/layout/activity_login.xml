@@ -9,15 +9,32 @@
     android:background="@color/verde"
     tools:context=".LoginActivity">
 
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="#FFF"
+        android:textStyle="bold"
+        android:textSize="18sp"
+        android:textAlignment="center"
+        android:text="Ingresa aqui para acceder al"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="#FFF"
+        android:textStyle="bold"
+        android:textSize="18sp"
+        android:textAlignment="center"
+        android:text="Congreso Industria 4.0"/>
     <Space
         android:layout_width="match_parent"
-        android:layout_height="20dp"></Space>
-
+        android:layout_height="30dp"></Space>
     <EditText
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/etUsuario"
-        android:hint="USUARIO"></EditText>
+        android:hint="Usuario"></EditText>
     <Space
         android:layout_width="match_parent"
         android:layout_height="20dp"></Space>
@@ -25,16 +42,16 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/etContra"
-        android:hint="CONTRASEÑA"></EditText>
+        android:hint="Contraseña"></EditText>
     <Space
         android:layout_width="match_parent"
         android:layout_height="20dp"></Space>
     <Button
-        android:layout_width="wrap_content"
+        android:layout_width="150dp"
         android:layout_height="wrap_content"
         android:text="INGRESAR"
-        android:textColor="@color/verde"
-        android:background="#000000"
+        android:background="@drawable/bg_btn2"
+        android:textColor="@drawable/txt_btn_prueba"
         android:id="@+id/btnIngresar"></Button>
 
 </LinearLayout>

@@ -128,6 +128,8 @@
         android:layout_height="40dp"
         android:layout_marginBottom="16dp"
         android:onClick="onClick"
+        android:background="@drawable/bg_btn"
+        android:textColor="@drawable/txt_btn_prueba"
         android:text="Ver más"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"

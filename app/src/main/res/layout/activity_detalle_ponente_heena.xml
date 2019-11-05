@@ -127,6 +127,8 @@
         android:id="@+id/btn"
         android:layout_width="150dp"
         android:layout_height="40dp"
+        android:background="@drawable/bg_btn"
+        android:textColor="@drawable/txt_btn_prueba"
         android:layout_marginBottom="16dp"
         android:onClick="onClick"
         android:text="Ver más"
