@@ -3,4 +3,13 @@
     <color name="colorPrimary">#008577</color>
     <color name="colorPrimaryDark">#00574B</color>
     <color name="colorAccent">#D81B60</color>
+
+    <color name="grisclaro">#EDEDED</color>
+    <color name="moradoscuro">#7C4DFF</color>
+    <color name="amarillo">#FFB300</color>
+    <color name="verde">#00BFA5</color>
+    <color name="magenta">#FF4081</color>
+
+    <color name="color_notification">#00D933</color>
+
 </resources>
