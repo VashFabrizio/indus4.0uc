@@ -7,15 +7,21 @@
          location permissions for the 'MyLocation' functionality.
     -->
     <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.INTERNET" />
 
     <application
         android:allowBackup="true"
+        android:label="@string/app_name"
         android:icon="@mipmap/ic_launcher"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.AppCompat.DayNight.NoActionBar">
-        <activity android:name=".LoginActivity"></activity>
-        <activity android:name=".AsistenciaActivity" />
+        <activity android:name=".LoginActivity"
+            android:label="Login"
+            android:theme="@style/Theme.AppCompat.DayNight" ></activity>
+        <activity android:name=".AsistenciaActivity"
+            android:label="QR"
+            android:theme="@style/Theme.AppCompat.DayNight"/>
         <activity
             android:name=".DetallePonente_Jairo"
             android:label="Jairo Vargas Bonilla"
@@ -70,7 +76,9 @@
             android:name=".Ponentes"
             android:label="Ponentes"
             android:theme="@style/Theme.AppCompat.DayNight" />
-        <activity android:name=".MainActivity" />
+        <activity android:name=".MainActivity"
+            android:label="Mapas"
+            android:theme="@style/Theme.AppCompat.DayNight"/>
         <activity android:name=".ImagenCompleta" />
         <!--
              The API key for Google Maps-based APIs is defined as a string resource.
@@ -86,13 +94,16 @@
 
         <activity
             android:name=".MapsFabLab"
-            android:label="@string/title_activity_maps_fab_lab" />
+            android:label="@string/title_activity_maps_fab_lab"
+            android:theme="@style/Theme.AppCompat.DayNight"/>
         <activity
             android:name=".MapsLabJ301"
-            android:label="@string/title_activity_maps_lab_j301" />
+            android:label="@string/title_activity_maps_lab_j301"
+            android:theme="@style/Theme.AppCompat.DayNight"/>
         <activity
             android:name=".MapsAuditorio"
-            android:label="@string/title_activity_maps_auditorio" />
+            android:label="@string/title_activity_maps_auditorio"
+            android:theme="@style/Theme.AppCompat.DayNight"/>
         <activity android:name=".Menu">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

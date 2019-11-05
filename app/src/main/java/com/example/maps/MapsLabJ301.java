@@ -4,6 +4,7 @@ import androidx.fragment.app.FragmentActivity;
 
 import android.app.Dialog;
 import android.content.DialogInterface;
+import android.content.pm.ActivityInfo;
 import android.graphics.drawable.ColorDrawable;
 import android.net.Uri;
 import android.os.Bundle;
@@ -39,6 +40,8 @@ public class MapsLabJ301 extends FragmentActivity implements OnMapReadyCallback,
 
         imglab1 = findViewById(R.id.imgLabRedes1);
         imglab1.setOnTouchListener(this);
+
+        setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
     }
 
 

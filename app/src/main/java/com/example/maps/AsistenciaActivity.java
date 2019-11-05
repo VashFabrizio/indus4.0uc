@@ -3,6 +3,7 @@ package com.example.maps;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
+import android.content.pm.ActivityInfo;
 import android.graphics.Bitmap;
 import android.os.Bundle;
 import android.view.View;
@@ -24,6 +25,9 @@ public class AsistenciaActivity extends AppCompatActivity implements View.OnClic
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_asistencia);
+
+        setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
+
         txtMiId = findViewById(R.id.txtMiId);
         ivMiQR = findViewById(R.id.ivMiQR);
         btnAsistenciaPrincipal = findViewById(R.id.btnAsistenciaPrincipal);

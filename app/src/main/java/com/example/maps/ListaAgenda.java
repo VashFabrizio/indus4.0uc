@@ -1,5 +1,6 @@
 package com.example.maps;
 
+import android.content.pm.ActivityInfo;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -18,6 +19,8 @@ public class ListaAgenda extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_lista_agenda);
+
+        setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
 
         rvAgenda=findViewById(R.id.rvListAgenda);
         rvAgenda.setLayoutManager(new LinearLayoutManager(this));
