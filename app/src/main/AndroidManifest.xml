@@ -15,7 +15,9 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".Ponentes"></activity>
+        <activity android:name=".DetalleAgenda"></activity>
+        <activity android:name=".ListaAgenda" />
+        <activity android:name=".Ponentes" />
         <activity android:name=".MainActivity" />
         <activity android:name=".ImagenCompleta" />
         <!--

@@ -35,12 +35,12 @@ public class Menu extends AppCompatActivity implements View.OnClickListener {
                 Intent i=new Intent(this, Ponentes.class);
                 startActivity(i);
                 break;
-/*
+
             case R.id.agenda:
                 Intent j=new Intent(this, ListaAgenda.class);
                 startActivity(j);
                 break;
-            case R.id.qr:
+           /* case R.id.qr:
                 Intent a=new Intent(this, LoginActivity.class);
                 startActivity(a);
                 break;*/
