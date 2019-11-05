@@ -28,7 +28,7 @@
         app:layout_constraintTop_toBottomOf="@id/img_portada" />
 
     <TextView
-        android:id="@+id/tvBiografiaHenna"
+        android:id="@+id/tvBiografiaJorge"
         android:layout_width="330dp"
         android:layout_height="wrap_content"
         android:layout_marginLeft="30dp"
@@ -37,11 +37,11 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.493"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tvNombreHenna"
+        app:layout_constraintTop_toBottomOf="@+id/tvNombreJorge"
         app:layout_constraintVertical_bias="0.025" />
 
     <TextView
-        android:id="@+id/tvNombreHenna"
+        android:id="@+id/tvNombreJorge"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="52dp"
@@ -119,7 +119,7 @@
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.044"
+        app:layout_constraintHorizontal_bias="0.015"
         app:layout_constraintStart_toStartOf="parent" />
 
     <Button

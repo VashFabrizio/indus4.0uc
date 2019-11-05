@@ -53,7 +53,7 @@
         app:layout_constraintTop_toBottomOf="@+id/img_portada" />
 
     <TextView
-        android:id="@+id/tvEventoH"
+        android:id="@+id/tvEventoJ"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginBottom="115dp"
@@ -83,16 +83,16 @@
         android:layout_height="wrap_content"
         android:layout_marginLeft="15dp"
         android:layout_marginRight="30dp"
-        android:layout_marginBottom="242dp"
+        android:layout_marginBottom="216dp"
         android:text="Eventos"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.08"
+        app:layout_constraintHorizontal_bias="0.015"
         app:layout_constraintStart_toStartOf="parent" />
 
     <TextView
-        android:id="@+id/tvDiaEventoH"
+        android:id="@+id/tvDiaEventoJ"
         android:layout_width="150dp"
         android:layout_height="wrap_content"
         android:layout_marginBottom="80dp"
@@ -103,7 +103,7 @@
 
 
     <TextView
-        android:id="@+id/tvHoraEventoH"
+        android:id="@+id/tvHoraEventoJ"
         android:layout_width="100dp"
         android:layout_height="wrap_content"
         android:layout_marginBottom="80dp"
