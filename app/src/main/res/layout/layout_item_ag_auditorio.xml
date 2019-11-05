@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:id="@+id/layoutRVA"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:background="@drawable/border"
+        android:foreground="?android:attr/selectableItemBackground"
+        android:clickable="true">
+
+        <TextView
+            android:id="@+id/tvFecha"
+            android:layout_width="80dp"
+            android:layout_height="match_parent"
+            android:background="@drawable/borderfecha"
+            android:gravity="center_horizontal"
+            android:text="14 NOV"
+            android:textSize="25dp"
+            android:padding="5dp"
+            android:textStyle="bold" />
+
+        <LinearLayout
+            android:layout_width="300dp"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+            <TextView
+                android:id="@+id/tvTitulo"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:text="Personal and Professional Development Challengers of Young Professionals in the Industry 4.0"
+                android:textSize="12dp"
+                android:padding="10dp"/>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="2">
+
+                <TextView
+                    android:id="@+id/tvHora"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:text="9:30 a.m."
+                    android:paddingLeft="10dp"/>
+
+                <TextView
+                    android:id="@+id/tvLugar"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:paddingLeft="10dp"
+                    android:text="Auditorio UC" />
+            </TableRow>
+
+
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/imgFlecha"
+            android:layout_width="match_parent"
+            android:layout_height="25dp"
+            app:srcCompat="@drawable/flecha" />
+
+    </LinearLayout>
+
+</LinearLayout>
