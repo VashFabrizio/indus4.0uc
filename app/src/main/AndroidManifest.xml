@@ -37,6 +37,10 @@
             android:name=".MapsAuditorio"
             android:label="@string/title_activity_maps_auditorio" />
         <activity android:name=".MainActivity">
+
+        </activity>
+        <activity
+            android:name=".ListaAgenda">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
