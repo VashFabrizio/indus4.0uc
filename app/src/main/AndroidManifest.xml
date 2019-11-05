@@ -15,7 +15,56 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".DetalleAgenda"></activity>
+        <activity
+            android:name=".DetallePonente_Jairo"
+            android:label="Jairo Vargas Bonilla"
+            android:theme="@style/Theme.AppCompat.DayNight" />
+        <activity
+            android:name=".DetallePonente_Jose"
+            android:label="José Durán Talledo"
+            android:theme="@style/Theme.AppCompat.DayNight" />
+        <activity
+            android:name=".DetallePonente_Italo"
+            android:label="Italo Quispe Guerra"
+            android:theme="@style/Theme.AppCompat.DayNight" />
+        <activity
+            android:name=".DetallePonente_Cesar"
+            android:label="César Gallegos"
+            android:theme="@style/Theme.AppCompat.DayNight" />
+        <activity
+            android:name=".DetallePonente_Edmundo"
+            android:label="Edmundo Muñoz Alvear"
+            android:theme="@style/Theme.AppCompat.DayNight" />
+        <activity
+            android:name=".DetallePonente_Nelson"
+            android:label="Nelson Alfonso Huertas"
+            android:theme="@style/Theme.AppCompat.DayNight" />
+        <activity
+            android:name=".DetallePonente_Lucia"
+            android:label="Lucía Pía Torres"
+            android:theme="@style/Theme.AppCompat.DayNight" />
+        <activity
+            android:name=".DetallePonente_Jorge"
+            android:label="Jorge Ascencio Damián"
+            android:theme="@style/Theme.AppCompat.DayNight" />
+        <activity
+            android:name=".DetallePonente_Heena"
+            android:label="Heena Rathore"
+            android:theme="@style/Theme.AppCompat.DayNight" />
+        <activity
+            android:name=".DetallePonente_Joseph"
+            android:label="Josep Cargol Noguer"
+            android:theme="@style/Theme.AppCompat.DayNight" />
+        <activity
+            android:name=".DetallePonente_Juan"
+            android:label="Juan Pablo Serna Cardona"
+            android:theme="@style/Theme.AppCompat.DayNight" />
+        <activity
+            android:name=".DetallePonente_Ruth"
+            android:label="Ruth Manzanares Grados"
+            android:theme="@style/Theme.AppCompat.DayNight" />
+
+        <activity android:name=".DetalleAgenda" />
         <activity android:name=".ListaAgenda" />
         <activity android:name=".Ponentes" />
         <activity android:name=".MainActivity" />

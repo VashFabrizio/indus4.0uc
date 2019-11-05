@@ -9,7 +9,7 @@ import android.view.View;
 
 public class Menu extends AppCompatActivity implements View.OnClickListener {
 
-    CardView ponenteCardView, agendaCardView, qrCardView;
+    CardView ponenteCardView, agendaCardView, qrCardView, mapsCardView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -20,10 +20,12 @@ public class Menu extends AppCompatActivity implements View.OnClickListener {
         ponenteCardView = findViewById(R.id.ponentes);
         agendaCardView = findViewById(R.id.agenda);
         qrCardView = findViewById(R.id.qr);
+        mapsCardView=findViewById(R.id.mapas);
 
         ponenteCardView.setOnClickListener(this);
         agendaCardView.setOnClickListener(this);
         qrCardView.setOnClickListener(this);
+        mapsCardView.setOnClickListener(this);
     }
 
     @Override
@@ -40,6 +42,12 @@ public class Menu extends AppCompatActivity implements View.OnClickListener {
                 Intent j=new Intent(this, ListaAgenda.class);
                 startActivity(j);
                 break;
+
+            case R.id.mapas:
+                Intent k = new Intent(this, MainActivity.class);
+                startActivity(k);
+                break;
+
            /* case R.id.qr:
                 Intent a=new Intent(this, LoginActivity.class);
                 startActivity(a);

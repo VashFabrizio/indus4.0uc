@@ -31,7 +31,7 @@ public class Ponentes extends AppCompatActivity {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id)
             {
-                /*if(position ==0)
+                if(position ==0)
                 {
                     Intent a = new Intent(view.getContext(), DetallePonente_Heena.class);
                     startActivity(a);
@@ -98,7 +98,7 @@ public class Ponentes extends AppCompatActivity {
                 {
                     Intent l = new Intent(view.getContext(), DetallePonente_Jose.class);
                     startActivity(l);
-                }*/
+                }
 
             }
         });
