@@ -1,15 +1,18 @@
 package com.example.maps.Adaptador;
 
 import android.content.Context;
+import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.example.maps.DetalleAgenda;
 import com.example.maps.Entidad.Item;
 import com.example.maps.Entidad.ItemAgenda;
 import com.example.maps.R;
@@ -34,7 +37,7 @@ public class RecyclerViewAuditorioAdapter extends RecyclerView.Adapter{
     }
 
     @Override
-    public void onBindViewHolder(@NonNull RecyclerView.ViewHolder holder, int position) {
+    public void onBindViewHolder(@NonNull RecyclerView.ViewHolder holder, final int position) {
         ItemAgenda itemAgenda = listItems.get(position);
         Holder Holder = (Holder) holder;
         Holder.tvFecha.setText(itemAgenda.getFecha());
@@ -42,6 +45,20 @@ public class RecyclerViewAuditorioAdapter extends RecyclerView.Adapter{
         Holder.tvHora.setText(itemAgenda.getHora());
         Holder.tvLugar.setText(itemAgenda.getLugar());
         Holder.ivFoto.setImageResource(itemAgenda.getFoto());
+
+        Holder.layrva.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                if (position<12)
+                {
+                    Intent i=new Intent(context, DetalleAgenda.class);
+                    i.putExtra("idEvento",String.valueOf(position));
+                    context.startActivity(i);
+                }
+
+            }
+        });
 
     }
 
@@ -54,6 +71,7 @@ public class RecyclerViewAuditorioAdapter extends RecyclerView.Adapter{
 
         TextView tvFecha, tvTitulo, tvHora, tvLugar;
         ImageView ivFoto;
+        LinearLayout layrva;
         public Holder(@NonNull View itemView) {
             super(itemView);
 
@@ -62,6 +80,7 @@ public class RecyclerViewAuditorioAdapter extends RecyclerView.Adapter{
             tvHora = itemView.findViewById(R.id.tvHora);
             tvLugar = itemView.findViewById(R.id.tvLugar);
             ivFoto= itemView.findViewById(R.id.imgFlecha);
+            layrva= itemView.findViewById(R.id.layoutRVA);
         }
     }
 }
