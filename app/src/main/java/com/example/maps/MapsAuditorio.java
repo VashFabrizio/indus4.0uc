@@ -83,7 +83,7 @@ public class MapsAuditorio extends FragmentActivity implements OnMapReadyCallbac
                 .target(fabLab)
                 .zoom(18)
                 .build();
-        mMap.addMarker(new MarkerOptions().position(fabLab).title("Auditorio UC"));
+        mMap.addMarker(new MarkerOptions().position(fabLab).title("Auditorio UC")).showInfoWindow();
         mMap.moveCamera(CameraUpdateFactory.newCameraPosition(cameraPosition));
     }
 

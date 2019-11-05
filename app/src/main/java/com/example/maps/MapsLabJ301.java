@@ -54,7 +54,7 @@ public class MapsLabJ301 extends FragmentActivity implements OnMapReadyCallback,
                 .target(j301)
                 .zoom(18)
                 .build();
-        mMap.addMarker(new MarkerOptions().position(j301).title("LABORATORIO DE REDES").snippet("3er piso Pabellon J"));
+        mMap.addMarker(new MarkerOptions().position(j301).title("LABORATORIO DE REDES").snippet("3er piso Pabellon J")).showInfoWindow();
         mMap.moveCamera(CameraUpdateFactory.newCameraPosition(cameraPosition));
     }
 
