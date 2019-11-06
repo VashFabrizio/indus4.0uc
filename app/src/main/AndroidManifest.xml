@@ -1,28 +1,27 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.example.maps">
-    <!--
-         The ACCESS_COARSE/FINE_LOCATION permissions are not required to use
-         Google Maps Android API v2, but you must specify either coarse or fine
-         location permissions for the 'MyLocation' functionality.
-    -->
-    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    package="com.example.vash.industria40uc">
+
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
     <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
 
     <application
+        android:name=".App"
         android:allowBackup="true"
-        android:label="@string/app_name"
         android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:usesCleartextTraffic="true"
         android:theme="@style/Theme.AppCompat.DayNight.NoActionBar">
-        <activity android:name=".LoginActivity"
-            android:label="Login"
-            android:theme="@style/Theme.AppCompat.DayNight" ></activity>
-        <activity android:name=".AsistenciaActivity"
-            android:label="QR"
-            android:theme="@style/Theme.AppCompat.DayNight"/>
+        <activity android:name=".LoginActivity"></activity>
+        <activity android:name=".ListaAgenda" />
+        <activity android:name=".DetalleAgenda" />
+        <activity android:name=".AsistenciaActivity" />
         <activity
             android:name=".DetallePonente_Jairo"
             android:label="Jairo Vargas Bonilla"
@@ -71,47 +70,19 @@
             android:name=".DetallePonente_Ruth"
             android:label="Ruth Manzanares Grados"
             android:theme="@style/Theme.AppCompat.DayNight" />
-        <activity android:name=".DetalleAgenda" />
-        <activity android:name=".ListaAgenda" />
         <activity
             android:name=".Ponentes"
             android:label="Ponentes"
             android:theme="@style/Theme.AppCompat.DayNight" />
-        <activity android:name=".MainActivity"
-            android:label="Mapas"
-            android:theme="@style/Theme.AppCompat.DayNight"/>
-        <activity android:name=".ImagenCompleta" />
-        <!--
-             The API key for Google Maps-based APIs is defined as a string resource.
-             (See the file "res/values/google_maps_api.xml").
-             Note that the API key is linked to the encryption key used to sign the APK.
-             You need a different API key for each encryption key, including the release key that is used to
-             sign the APK for publishing.
-             You can define the keys for the debug and release targets in src/debug/ and src/release/.
-        -->
-        <meta-data
-            android:name="com.google.android.geo.API_KEY"
-            android:value="@string/google_maps_key" />
-
-        <activity
-            android:name=".MapsFabLab"
-            android:label="@string/title_activity_maps_fab_lab"
-            android:theme="@style/Theme.AppCompat.DayNight"/>
-        <activity
-            android:name=".MapsLabJ301"
-            android:label="@string/title_activity_maps_lab_j301"
-            android:theme="@style/Theme.AppCompat.DayNight"/>
-        <activity
-            android:name=".MapsAuditorio"
-            android:label="@string/title_activity_maps_auditorio"
-            android:theme="@style/Theme.AppCompat.DayNight"/>
-        <activity android:name=".Menu">
+        <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity android:name=".Notificaciones"
+                  android:theme="@style/Theme.AppCompat.DayNight.NoActionBar"/>
     </application>
 
 </manifest>
