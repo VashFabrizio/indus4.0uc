@@ -10,7 +10,8 @@ import android.view.View;
 
 public class Menu extends AppCompatActivity implements View.OnClickListener {
 
-    CardView ponenteCardView, agendaCardView, qrCardView, mapsCardView , notiCardView;
+    CardView ponenteCardView, agendaCardView, qrCardView, mapsCardView , notiCardView
+                , documentosCardView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -24,12 +25,14 @@ public class Menu extends AppCompatActivity implements View.OnClickListener {
         qrCardView = findViewById(R.id.qr);
         mapsCardView=findViewById(R.id.mapas);
         notiCardView = findViewById(R.id.notificacion);
+        documentosCardView = findViewById(R.id.documentos);
 
         ponenteCardView.setOnClickListener(this);
         agendaCardView.setOnClickListener(this);
         qrCardView.setOnClickListener(this);
         notiCardView.setOnClickListener(this);
         mapsCardView.setOnClickListener(this);
+        documentosCardView.setOnClickListener(this);
     }
 
     @Override
@@ -61,7 +64,10 @@ public class Menu extends AppCompatActivity implements View.OnClickListener {
                 Intent w = new Intent(this, Notificaciones.class);
                 startActivity(w);
                 break;
-
+            case R.id.documentos:
+                Intent s = new Intent(this, Documentos.class);
+                startActivity(s);
+                break;
            /* case R.id.qr:
                 Intent a=new Intent(this, LoginActivity.class);
                 startActivity(a);

@@ -42,4 +42,11 @@ dependencies {
     implementation 'org.jbundle.util.osgi.wrapped:org.jbundle.util.osgi.wrapped.org.apache.http.client:4.1.2'
     implementation 'com.squareup.retrofit2:retrofit:2.4.0'
 
+    androidTestImplementation 'androidx.test.ext:junit:1.1.1'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.2.0'
+    implementation 'com.amitshekhar.android:android-networking:1.0.1'
+    implementation 'com.squareup.picasso:picasso:2.71828'
+    implementation 'com.github.barteksc:android-pdf-viewer:2.8.2'
+    implementation 'com.github.kk121:File-Loader:1.2'
+
 }

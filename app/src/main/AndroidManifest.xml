@@ -8,7 +8,8 @@
     -->
     <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
     <uses-permission android:name="android.permission.INTERNET" />
-    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
     <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
     <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
     <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
@@ -22,12 +23,15 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.AppCompat.DayNight.NoActionBar"
         android:usesCleartextTraffic="true">
-        <activity android:name=".Notificaciones"></activity>
+        <activity android:name=".PDFActivity"></activity>
+        <activity android:name=".Documentos" />
+        <activity android:name=".Notificaciones" />
         <activity
             android:name=".LoginActivity"
-            android:theme="@style/Theme.AppCompat.DayNight" >
+            android:theme="@style/Theme.AppCompat.DayNight">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
+
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
@@ -118,8 +122,7 @@
             android:name=".MapsAuditorio"
             android:label="@string/title_activity_maps_auditorio"
             android:theme="@style/Theme.AppCompat.DayNight" />
-        <activity android:name=".Menu">
-        </activity>
+        <activity android:name=".Menu" />
     </application>
 
 </manifest>
