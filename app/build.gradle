@@ -35,4 +35,11 @@ dependencies {
     implementation 'com.journeyapps:zxing-android-embedded:3.2.0@aar'
     implementation 'com.android.volley:volley:1.1.0'
 
+    //librerias para los servicios
+    implementation 'com.google.code.gson:gson:2.8.5'
+    implementation 'com.squareup.retrofit2:converter-gson:2.4.0'
+    implementation 'com.android.volley:volley:1.1.0'
+    implementation 'org.jbundle.util.osgi.wrapped:org.jbundle.util.osgi.wrapped.org.apache.http.client:4.1.2'
+    implementation 'com.squareup.retrofit2:retrofit:2.4.0'
+
 }

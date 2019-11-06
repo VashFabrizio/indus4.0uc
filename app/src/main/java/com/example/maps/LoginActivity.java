@@ -47,7 +47,7 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
 
         if(!usuario.isEmpty() && !pasword.isEmpty()){
             validarUsuario("http://ymarquez.webfactional.com/serviciosRest/controladores/user.php");
-        }else{
+            }else{
             Toast.makeText(LoginActivity.this,"Rellene los campos",Toast.LENGTH_SHORT).show();
 
         }
@@ -59,8 +59,7 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
             @Override
             public void onResponse(String response) {
                 if(!response.isEmpty()){
-                    Intent i = new Intent(getApplicationContext(),AsistenciaActivity.class);
-                    i.putExtra("correo_usr",etUsuario.getText().toString());
+                    Intent i = new Intent(getBaseContext(),Menu.class);
                     startActivity(i);
                 }else{
                     Toast.makeText(LoginActivity.this,"Usuario inválido",Toast.LENGTH_SHORT).show();
