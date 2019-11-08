@@ -1,29 +1,29 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:orientation="vertical"
     android:layout_height="match_parent"
-    tools:context=".Ponentes">
+    android:orientation="vertical"
+    tools:context=".Participantes">
 
     <TextView
         android:id="@+id/textView"
         android:layout_gravity="center"
         android:layout_marginTop="30dp"
-        android:layout_marginBottom="20dp"
+        android:layout_marginBottom="10dp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="  PONENTES"
-        android:drawableLeft="@drawable/ic_record_voice_over_black_24dp"
+        android:text="  PARTICIPANTES"
+        android:drawableLeft="@drawable/ic_people_black_24dp"
         android:textAppearance="@style/TextAppearance.AppCompat.Large"
         android:textColor="#000000" />
 
-    <ListView
-        android:id="@+id/listViewPonentes"
+    <androidx.recyclerview.widget.RecyclerView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:scrollbars="none"
-        android:divider="@drawable/divider"/>
-
+        android:id="@+id/recyclerView"
+        android:scrollbars="vertical"/>
 </LinearLayout>

@@ -11,12 +11,16 @@ import android.view.View;
 public class Menu extends AppCompatActivity implements View.OnClickListener {
 
     CardView ponenteCardView, agendaCardView, qrCardView, mapsCardView , notiCardView
-                , documentosCardView;
+                , documentosCardView , participantesCardView;
+    public String email;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_menu);
+
+        Bundle datos = this.getIntent().getExtras();
+        email = datos.getString("email");
 
         setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
 
@@ -26,6 +30,7 @@ public class Menu extends AppCompatActivity implements View.OnClickListener {
         mapsCardView=findViewById(R.id.mapas);
         notiCardView = findViewById(R.id.notificacion);
         documentosCardView = findViewById(R.id.documentos);
+        participantesCardView = findViewById(R.id.participantes);
 
         ponenteCardView.setOnClickListener(this);
         agendaCardView.setOnClickListener(this);
@@ -33,6 +38,7 @@ public class Menu extends AppCompatActivity implements View.OnClickListener {
         notiCardView.setOnClickListener(this);
         mapsCardView.setOnClickListener(this);
         documentosCardView.setOnClickListener(this);
+        participantesCardView.setOnClickListener(this);
     }
 
     @Override
@@ -57,7 +63,7 @@ public class Menu extends AppCompatActivity implements View.OnClickListener {
 
             case R.id.qr:
                 Intent q = new Intent(this,AsistenciaActivity.class);
-                //falta que envie el correo
+                q.putExtra("correo_usr" , email);
                 startActivity(q);
                 break;
             case R.id.notificacion:
@@ -67,6 +73,11 @@ public class Menu extends AppCompatActivity implements View.OnClickListener {
             case R.id.documentos:
                 Intent s = new Intent(this, Documentos.class);
                 startActivity(s);
+                break;
+
+            case R.id.participantes:
+                Intent p = new Intent(this, Participantes.class);
+                startActivity(p);
                 break;
            /* case R.id.qr:
                 Intent a=new Intent(this, LoginActivity.class);

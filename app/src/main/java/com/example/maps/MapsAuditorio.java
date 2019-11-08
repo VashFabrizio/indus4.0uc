@@ -128,7 +128,7 @@ public class MapsAuditorio extends FragmentActivity implements OnMapReadyCallbac
         int a=v.getId();
         if(R.id.imgAuditorio1==a)
         {
-            uri = Uri.parse("android.resource://"+getPackageName()+"/drawable/auditorioucci");    //path of image
+            uri = Uri.parse("android.resource://"+getPackageName()+"/drawable/auditorioucci1");    //path of image
         }
 
         ImageView imageView = new ImageView(this);

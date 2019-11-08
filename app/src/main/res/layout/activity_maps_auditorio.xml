@@ -21,12 +21,15 @@
         android:layout_height="wrap_content"
         android:textSize="20dp"
         android:textStyle="bold"
-        android:layout_margin="10dp"
+        android:padding="10dp"
+        android:background="#6802C1"
+        android:textColor="#fff"
         android:text="Auditorio Universidad Continental" />
 
     <TableRow
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:layout_margin="10dp"
         android:layout_weight="3" >
 
         <ImageView
@@ -35,7 +38,7 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:adjustViewBounds="true"
-            android:src="@drawable/auditorioucci"/>
+            android:src="@drawable/auditorioucci1"/>
 
 
     </TableRow>

@@ -1,13 +1,15 @@
 package com.example.maps;
 
+import android.content.Intent;
 import android.content.pm.ActivityInfo;
 import android.os.Bundle;
+import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 import androidx.appcompat.app.AppCompatActivity;
 import java.util.List;
 
-public class DetalleAgenda extends AppCompatActivity {
+public class DetalleAgenda extends AppCompatActivity implements View.OnClickListener {
 
     private int idEvento;
     private String evento,fecha,hora,ponente,mapa;
@@ -25,6 +27,7 @@ public class DetalleAgenda extends AppCompatActivity {
         tvHora=findViewById(R.id.tvHora);
         tvPonente=findViewById(R.id.tvPonente);
         btnLugar=findViewById(R.id.btnLugar);
+        btnLugar.setOnClickListener(this);
 
         idEvento= Integer.parseInt(getIntent().getStringExtra("idEvento"));
         final IndustriaDB db=new IndustriaDB(this);
@@ -45,5 +48,11 @@ public class DetalleAgenda extends AppCompatActivity {
         tvEventoNombre.setText(evento);
         tvFecha.setText(fecha);
         btnLugar.setText(mapa);
+    }
+
+    @Override
+    public void onClick(View v) {
+        Intent i = new Intent(this, MapsAuditorio.class);
+        startActivity(i);
     }
 }

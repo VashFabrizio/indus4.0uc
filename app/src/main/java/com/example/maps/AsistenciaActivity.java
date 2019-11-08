@@ -44,8 +44,7 @@ public class AsistenciaActivity extends AppCompatActivity implements View.OnClic
 
     @Override
     public void onClick(View view) {
-        Intent i = new Intent(this, MainActivity.class);
-        startActivity(i);
+        finish();
     }
 
     private void generarQR(String correo){

@@ -1,9 +1,12 @@
 package com.example.maps;
 
 import android.app.Notification;
+import android.content.Context;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.graphics.Color;
+import android.net.ConnectivityManager;
+import android.net.NetworkInfo;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -34,9 +37,11 @@ import androidx.core.app.NotificationManagerCompat;
 public class Notificaciones extends AppCompatActivity {
     private RequestQueue queue;
     private int count = 0 ;
+    public boolean nointer ;
     private TableLayout tableLayout;
     private List<String> MensajesList = new ArrayList<>() ;
     private List<String> RemoveList = new ArrayList<>() ;
+    public Timer timer;
 
     private NotificationManagerCompat notificationManager;
 
@@ -44,7 +49,7 @@ public class Notificaciones extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_notificaciones);
-
+        timer =  new Timer();
         notificationManager = NotificationManagerCompat.from(this);
         queue = Volley.newRequestQueue(this );
         tableLayout=findViewById(R.id.tableLayout);
@@ -61,14 +66,14 @@ public class Notificaciones extends AppCompatActivity {
                     @Override
                     public void onResponse(JSONObject response) {
                         try {
-
                             JSONArray Array = response.getJSONArray("Notificaciones");
-
                             JSONArray newArray = validateState(Array);
                             setData(newArray);
+
                         } catch (JSONException e) {
-                            Toast.makeText(Notificaciones.this, e.toString(), Toast.LENGTH_SHORT).show();
+                            Toast.makeText(Notificaciones.this,"CONECTESE A INTERNET", Toast.LENGTH_SHORT).show();
                             e.printStackTrace();
+                            nointer = true ;
 
                         }
                     }
@@ -76,7 +81,7 @@ public class Notificaciones extends AppCompatActivity {
                 new Response.ErrorListener() {
                     @Override
                     public void onErrorResponse(VolleyError error) {
-                        Toast.makeText(Notificaciones.this, error.toString() , Toast.LENGTH_SHORT).show();
+                        Toast.makeText(Notificaciones.this, "INDUSTRIA 4.0 UC conectese a internet" , Toast.LENGTH_LONG).show();
                     }
                 });
         queue.add(request);
@@ -135,23 +140,29 @@ public class Notificaciones extends AppCompatActivity {
         catch (Exception e)
         {
             Toast.makeText(this, e.toString(), Toast.LENGTH_SHORT).show();
+            nointer = true ;
         }
 
     }
 
+    public void ValidateNet()
+    {
+        ConnectivityManager connectivityManager = (ConnectivityManager) getSystemService(Context.CONNECTIVITY_SERVICE);
+        NetworkInfo networkInfo = connectivityManager.getActiveNetworkInfo();
+        if (networkInfo != null && networkInfo.isConnected()) {
+            obtenerNotificaciones();
+        }
+    }
 
     public void setTimer()
     {
         TimerTask timerTask = new TimerTask() {
             @Override
             public void run() {
-                obtenerNotificaciones();
+                ValidateNet();
             }
         };
-
-        Timer timer =  new Timer();
         timer.scheduleAtFixedRate(timerTask,10000,3000);
-
     }
 
     public boolean validate(String id)

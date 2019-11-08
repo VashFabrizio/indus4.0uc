@@ -8,8 +8,8 @@
     -->
     <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
     <uses-permission android:name="android.permission.INTERNET" />
-    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
-    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
     <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
     <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
@@ -23,7 +23,8 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.AppCompat.DayNight.NoActionBar"
         android:usesCleartextTraffic="true">
-        <activity android:name=".PDFActivity"></activity>
+        <activity android:name=".Participantes"></activity>
+        <activity android:name=".PDFActivity" />
         <activity android:name=".Documentos" />
         <activity android:name=".Notificaciones" />
         <activity
@@ -36,9 +37,7 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".AsistenciaActivity"
-            android:label="QR"
-            android:theme="@style/Theme.AppCompat.DayNight" />
+            android:name=".AsistenciaActivity"/>
         <activity
             android:name=".DetallePonente_Jairo"
             android:label="Jairo Vargas Bonilla"
@@ -90,13 +89,9 @@
         <activity android:name=".DetalleAgenda" />
         <activity android:name=".ListaAgenda" />
         <activity
-            android:name=".Ponentes"
-            android:label="Ponentes"
-            android:theme="@style/Theme.AppCompat.DayNight" />
+            android:name=".Ponentes" />
         <activity
-            android:name=".MainActivity"
-            android:label="Mapas"
-            android:theme="@style/Theme.AppCompat.DayNight" />
+            android:name=".MainActivity"/>
         <activity android:name=".ImagenCompleta" />
         <!--
              The API key for Google Maps-based APIs is defined as a string resource.

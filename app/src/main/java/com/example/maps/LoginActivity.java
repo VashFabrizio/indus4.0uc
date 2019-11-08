@@ -58,9 +58,11 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
         StringRequest stringRequest = new StringRequest(Request.Method.POST, URL, new Response.Listener<String>() {
             @Override
             public void onResponse(String response) {
-                if(!response.isEmpty()){
+                if(!response.isEmpty() && response.length()>1){
                     Intent i = new Intent(getBaseContext(),Menu.class);
+                    i.putExtra("email" , usuario );
                     startActivity(i);
+                    finish();
                 }else{
                     Toast.makeText(LoginActivity.this,"Usuario inválido",Toast.LENGTH_SHORT).show();
                 }
