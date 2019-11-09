@@ -11,6 +11,7 @@ import android.os.Bundle;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
+import android.widget.ProgressBar;
 import android.widget.TableLayout;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -42,6 +43,7 @@ public class Notificaciones extends AppCompatActivity {
     private TableLayout tableLayout;
     private List<String> MensajesList = new ArrayList<>() ;
     private List<String> RemoveList = new ArrayList<>() ;
+    ProgressBar pro;
     public Timer timer;
 
     private NotificationManagerCompat notificationManager;
@@ -51,6 +53,7 @@ public class Notificaciones extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_notificaciones);
         timer =  new Timer();
+        pro = findViewById(R.id.progressBarNoti);
         notificationManager = NotificationManagerCompat.from(this);
         queue = Volley.newRequestQueue(this );
         tableLayout=findViewById(R.id.tableLayout);
@@ -69,6 +72,7 @@ public class Notificaciones extends AppCompatActivity {
                         try {
                             JSONArray Array = response.getJSONArray("Notificaciones");
                             JSONArray newArray = validateState(Array);
+                            pro.setVisibility(View.GONE);
                             setData(newArray);
 
                         } catch (JSONException e) {
@@ -84,7 +88,7 @@ public class Notificaciones extends AppCompatActivity {
                     public void onErrorResponse(VolleyError error) {
                         Log.e("net",error.toString());
                         timer.cancel();
-                        finish();
+                        pro.setVisibility(View.VISIBLE);
                     }
                 });
         queue.add(request);
@@ -97,28 +101,30 @@ public class Notificaciones extends AppCompatActivity {
             SQLiteDatabase conexion = db.getReadableDatabase();
             String mQuery = "SELECT evento_nombre FROM evento WHERE evento_id = ?";
 
-            List<Evento> eventoList = db.mostrarEventosAgenda();
-            String eventos =eventoList.get(1).getNombre();
             for (int i = 0 ; i < array.length() ; i++)
             {
                 View tableRow = LayoutInflater.from(this).inflate(R.layout.table_item,null,false);
                 TextView evento  =  tableRow.findViewById(R.id.evento);
                 TextView mensaje  =  tableRow.findViewById(R.id.mensaje);
+                TextView hora  =  tableRow.findViewById(R.id.hora);
 
                 JSONObject a = array.getJSONObject(i);
                 String notificacion_id = a.getString("notificacion_id");
+                String notificacion_hora = a.getString("notificacion_hora");
                 String eveto_id = a.getString("evento_id");
+
+
 
                 String[] selectionArgs = {eveto_id};
                 Cursor c = conexion.rawQuery(mQuery, selectionArgs);
 
                 c.moveToFirst();
                 String evento_nombre = c.getString(0);
-
                 String notificacion_mensaje = a.getString("notificacion_mensaje");
 
                 evento.setText(evento_nombre);
                 mensaje.setText(notificacion_mensaje);
+                hora.setText(notificacion_hora);
 
                 Boolean valor = validate(notificacion_id);
                 if(!valor){
@@ -142,7 +148,7 @@ public class Notificaciones extends AppCompatActivity {
         }
         catch (Exception e)
         {
-            Toast.makeText(this, e.toString(), Toast.LENGTH_SHORT).show();
+            //Toast.makeText(this, e.toString(), Toast.LENGTH_SHORT).show();
             nointer = true ;
         }
 
@@ -154,6 +160,9 @@ public class Notificaciones extends AppCompatActivity {
         NetworkInfo networkInfo = connectivityManager.getActiveNetworkInfo();
         if (networkInfo != null && networkInfo.isConnected()) {
             obtenerNotificaciones();
+        }
+        else{
+            pro.setVisibility(View.VISIBLE);
         }
     }
 

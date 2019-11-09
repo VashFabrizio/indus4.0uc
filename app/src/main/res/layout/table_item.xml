@@ -16,13 +16,19 @@
         android:layout_weight="0.50"
         android:textColor="#fff"
         android:gravity="center"/>
-
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:id="@+id/hora"
+        android:textColor="#BBB7B7"
+        android:textSize="10sp"/>
     <TextView
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:id="@+id/evento"
         android:layout_marginTop="5dp"
-        android:layout_marginLeft="5dp"
+        android:layout_marginLeft="2dp"
         android:layout_marginRight="5dp"
         android:layout_marginBottom="10dp"
         android:textColor="#fff"

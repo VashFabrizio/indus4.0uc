@@ -18,6 +18,14 @@
         android:drawableLeft="@drawable/ic_notification"
         android:textAppearance="@style/TextAppearance.AppCompat.Large"
         android:textColor="#fff" />
+
+    <ProgressBar
+        android:id="@+id/progressBarNoti"
+        android:layout_marginTop="60dp"
+        style="?android:attr/progressBarStyle"
+        android:layout_width="match_parent"
+        android:layout_height="100dp" />
+
     <ScrollView
         android:layout_width="fill_parent"
         android:layout_height="fill_parent">
