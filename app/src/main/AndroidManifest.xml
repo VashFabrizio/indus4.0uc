@@ -7,6 +7,7 @@
          location permissions for the 'MyLocation' functionality.
     -->
     <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
@@ -23,21 +24,22 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.AppCompat.DayNight.NoActionBar"
         android:usesCleartextTraffic="true">
-        <activity android:name=".Participantes"></activity>
-        <activity android:name=".PDFActivity" />
-        <activity android:name=".Documentos" />
-        <activity android:name=".Notificaciones" />
-        <activity
-            android:name=".LoginActivity"
-            android:theme="@style/Theme.AppCompat.DayNight">
+        <activity android:name=".SplashActivity"  android:theme="@style/Theme.AppCompat.Light.NoActionBar">>
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity android:name=".Participantes" />
+        <activity android:name=".PDFActivity" />
+        <activity android:name=".Documentos" />
+        <activity android:name=".Notificaciones" />
         <activity
-            android:name=".AsistenciaActivity"/>
+            android:name=".LoginActivity"
+            android:theme="@style/Theme.AppCompat.DayNight">
+        </activity>
+        <activity android:name=".AsistenciaActivity" />
         <activity
             android:name=".DetallePonente_Jairo"
             android:label="Jairo Vargas Bonilla"
@@ -88,10 +90,8 @@
             android:theme="@style/Theme.AppCompat.DayNight" />
         <activity android:name=".DetalleAgenda" />
         <activity android:name=".ListaAgenda" />
-        <activity
-            android:name=".Ponentes" />
-        <activity
-            android:name=".MainActivity"/>
+        <activity android:name=".Ponentes" />
+        <activity android:name=".MainActivity" />
         <activity android:name=".ImagenCompleta" />
         <!--
              The API key for Google Maps-based APIs is defined as a string resource.

@@ -84,7 +84,7 @@
         android:layout_marginLeft="15dp"
         android:layout_marginRight="30dp"
         android:layout_marginBottom="205dp"
-        android:text="Eventos"
+        android:text="Ponencia :"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"

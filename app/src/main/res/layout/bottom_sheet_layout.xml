@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:gravity="center_horizontal"
+    android:padding="16dp"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAlignment="center"
+        android:text="Desarrollado en el curso de Soluciones Mobiles UC"
+        android:textSize="20sp"/>
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:orientation="horizontal">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Docente :"
+            android:textSize="17dp"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="17dp"
+            android:text=" Yuri Marquez Solis"/>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:orientation="horizontal">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Desarrolladores :"
+            android:textSize="17sp"/>
+        <TextView
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:textSize="17sp" />
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:orientation="horizontal">
+        <TextView
+            android:layout_width="130dp"
+            android:drawableRight="@drawable/baseline_emoji_people_black_18dp"
+            android:layout_height="wrap_content"
+            android:textSize="17sp"/>
+        <TextView
+            android:layout_width="250dp"
+            android:text="Jesus Jhony Condor Ramos"
+            android:layout_height="wrap_content"
+            android:textSize="17sp" />
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:orientation="horizontal">
+        <TextView
+            android:layout_width="130dp"
+            android:drawableRight="@drawable/baseline_emoji_people_black_18dp"
+            android:layout_height="wrap_content"
+            android:textSize="17sp"/>
+        <TextView
+            android:layout_width="250dp"
+            android:text="Efrain Elvis Figueroa Cruz"
+            android:layout_height="wrap_content"
+            android:textSize="17sp" />
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:orientation="horizontal">
+        <TextView
+            android:layout_width="130dp"
+            android:drawableRight="@drawable/baseline_emoji_people_black_18dp"
+            android:layout_height="wrap_content"
+            android:textSize="17sp"/>
+        <TextView
+            android:layout_width="250dp"
+            android:text="Fabrizio Arnaldo Orcada Vega"
+            android:layout_height="wrap_content"
+            android:textSize="17sp" />
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:orientation="horizontal">
+        <TextView
+            android:layout_width="130dp"
+            android:drawableRight="@drawable/baseline_emoji_people_black_18dp"
+            android:layout_height="wrap_content"
+            android:textSize="17sp"/>
+        <TextView
+            android:layout_width="250dp"
+            android:text="Jean Paul Palomino Ricapa"
+            android:layout_height="wrap_content"
+            android:textSize="17sp" />
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:orientation="horizontal">
+        <TextView
+            android:layout_width="130dp"
+            android:drawableRight="@drawable/baseline_emoji_people_black_18dp"
+            android:layout_height="wrap_content"
+            android:textSize="17sp"/>
+        <TextView
+            android:layout_width="250dp"
+            android:text="Janice Stefany Rafael Carpio"
+            android:layout_height="wrap_content"
+            android:textSize="17sp" />
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:orientation="horizontal">
+        <TextView
+            android:layout_width="130dp"
+            android:drawableRight="@drawable/baseline_emoji_people_black_18dp"
+            android:layout_height="wrap_content"
+            android:textSize="17sp"/>
+        <TextView
+            android:layout_width="250dp"
+            android:text="Ronald Jhon Sinche Leiva"
+            android:layout_height="wrap_content"
+            android:textSize="17sp" />
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:orientation="horizontal">
+        <TextView
+            android:layout_width="130dp"
+            android:drawableRight="@drawable/baseline_emoji_people_black_18dp"
+            android:layout_height="wrap_content"
+            android:textSize="17sp"/>
+        <TextView
+            android:layout_width="250dp"
+            android:text="Gino Joel Taipe Miranda"
+            android:layout_height="wrap_content"
+            android:textSize="17sp" />
+    </LinearLayout>
+</LinearLayout>

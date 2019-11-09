@@ -7,17 +7,20 @@ import android.content.Intent;
 import android.content.pm.ActivityInfo;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.Button;
 
 public class Menu extends AppCompatActivity implements View.OnClickListener {
 
     CardView ponenteCardView, agendaCardView, qrCardView, mapsCardView , notiCardView
                 , documentosCardView , participantesCardView;
+    Button cred;
     public String email;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_menu);
+
 
         Bundle datos = this.getIntent().getExtras();
         email = datos.getString("email");
@@ -31,12 +34,14 @@ public class Menu extends AppCompatActivity implements View.OnClickListener {
         notiCardView = findViewById(R.id.notificacion);
         documentosCardView = findViewById(R.id.documentos);
         participantesCardView = findViewById(R.id.participantes);
+        cred = findViewById(R.id.creditos);
 
         ponenteCardView.setOnClickListener(this);
         agendaCardView.setOnClickListener(this);
         qrCardView.setOnClickListener(this);
         notiCardView.setOnClickListener(this);
         mapsCardView.setOnClickListener(this);
+        cred.setOnClickListener(this);
         documentosCardView.setOnClickListener(this);
         participantesCardView.setOnClickListener(this);
     }
@@ -79,10 +84,11 @@ public class Menu extends AppCompatActivity implements View.OnClickListener {
                 Intent p = new Intent(this, Participantes.class);
                 startActivity(p);
                 break;
-           /* case R.id.qr:
-                Intent a=new Intent(this, LoginActivity.class);
-                startActivity(a);
-                break;*/
+
+            case R.id.creditos:
+                modalClass modal = new modalClass();
+                modal.show(getSupportFragmentManager(),"Modal");
+                break;
         }
     }
 }
