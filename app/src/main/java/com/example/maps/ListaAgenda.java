@@ -13,6 +13,7 @@ public class ListaAgenda extends AppCompatActivity {
 
     private RecyclerView rvAgenda;
     private RecyclerViewEventoAdapter eventoAdapter;
+    private RecyclerViewEvento15Adapter evento15Adapter;
     private Button btn14N,btn15N;
 
     @Override
@@ -29,7 +30,7 @@ public class ListaAgenda extends AppCompatActivity {
 
         final IndustriaDB db=new IndustriaDB(this);
         db.insertarEvento();
-        eventoAdapter=new RecyclerViewEventoAdapter(db.mostrarEventosAgenda());
+        eventoAdapter=new RecyclerViewEventoAdapter(db.mostrarEventos14N());
         rvAgenda.setAdapter(eventoAdapter);
 
     }

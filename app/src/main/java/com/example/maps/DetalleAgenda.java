@@ -36,11 +36,11 @@ public class DetalleAgenda extends AppCompatActivity implements View.OnClickList
         {
             if(i==idEvento)
             {
-                evento=eventoList.get(i).getNombre();
-                fecha=eventoList.get(i).getFecha();
-                hora=eventoList.get(i).getHora();
-                ponente=eventoList.get(i).getPonente();
-                mapa=eventoList.get(i).getLugar();
+                evento=eventoList.get(i-1).getNombre();
+                fecha=eventoList.get(i-1).getFecha();
+                hora=eventoList.get(i-1).getHora();
+                ponente=eventoList.get(i-1).getPonente();
+                mapa=eventoList.get(i-1).getLugar();
             }
         }
         tvPonente.setText(ponente);
